@@ -1,0 +1,22 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is learning react without using npx create react app cmd",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarveshSrivastava/React.git"
+  },
+  "author": "Sarvesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SarveshSrivastava/React/issues"
+  },
+  "homepage": "https://github.com/SarveshSrivastava/React#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
+}
