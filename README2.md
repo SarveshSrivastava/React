@@ -8,8 +8,8 @@
 ## JSX
 - JSX is not HTML
 - JSX is like HTML
-    <h1 id="head" class="head">heading</h1> -   HTML
-    <h1 id="head" className="head">heading</h1> -   JSX (this is why JSX is not HTML it is like HTML)
+    "<h1 id="head" class="head">heading</h1> -   HTML"
+    "<h1 id="head" className="head">heading</h1> -   JSX (this is why JSX is not HTML it is like HTML)"
 
 Earlier we were using
     - React.createElement("h1",{id:"head"},"heading);   -   this is an object not HTML  -   This object when passed to ReactDOM.render() makes it HTML and renders in browsers
