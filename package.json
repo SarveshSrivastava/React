@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "This is learning react without using npx create react app cmd",
   "scripts": {
+    "start": "parcel index-react.html",
+    "ss": "parcel build index-react.html",
     "test": "jest"
   },
   "repository": {

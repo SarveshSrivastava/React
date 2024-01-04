@@ -1,6 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client"
-
+import ReactDOM from "react-dom/client";
 
 /*
 <div id = "parent">
@@ -15,23 +14,31 @@ import ReactDOM from "react-dom/client"
 </div>
 */
 
-
-
 // const heading = React.createElement("h1", {id:"heading"}, "Hi Sarvesh from React");
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(heading)
 
+// const parent = React.createElement("div", { id: "parent" },
+//                 [React.createElement("div", { id: "child1" }, [React.createElement("h1", {},"Child1 H1 tag"), React.createElement("h2", {},"Child1 H2 tag")]),
+//                     React.createElement("div", { id: "child2" }, [React.createElement("h1", {},"Child2 H1 tag"), React.createElement("h2", {},"Child2 H2 tag")])])
 
-const parent = React.createElement("div", { id: "parent" }, 
-                [React.createElement("div", { id: "child1" }, [React.createElement("h1", {},"Child1 H1 tag"), React.createElement("h2", {},"Child1 H2 tag")]), 
-                    React.createElement("div", { id: "child2" }, [React.createElement("h1", {},"Child2 H1 tag"), React.createElement("h2", {},"Child2 H2 tag")])])
+const parent = (
+  <>
+    <h1>Parcel converts JSX to JS which browsers can understand.</h1>
+    <h1>
+      Parcel doesn't do the job of converting JSX to JS it acts as a manager and
+      the Babel is the one which Transpiles JSX to JS
+    </h1>
+    <h1>Babel converts JSX to JS which browsers can understand.</h1>
+  </>
+);
 
 //React.createElement()  this is an object not an html tag
 //React.createElement(tag, {attributes to the tag like id, name ......}, child element) accepts 3 arguments
 //sibling tags are declared in array
 
-console.log(parent)     //this will print the object as React.createElement()  this is an object not an html tag
+console.log(parent); //this will print the object as React.createElement()  this is an object not an html tag
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);                    
+root.render(parent);
