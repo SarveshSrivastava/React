@@ -1,44 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-/*
-<div id = "parent">
-    <div id = "child1">
-        <h1>Child1 H1 tag</h1>
-        <h2>Child1 H2 tag</h2>
+//React Element
+const heading = <h1>React Element</h1>;
+
+//React Functional Component
+const HeadingComponent1 = () => {
+  return <h1>HeadingComponent with Explicit Return</h1>;
+};
+
+const HeadingComponent2 = () => {
+  return (
+    <div>
+      {heading}     {/* this is how we can include JS this will evaluate any expression inside JSX  */}
+      <h1>HeadingComponent with Explicit Return with paranthesis</h1>
     </div>
-    <div id = "child2">
-        <h1>Child2 H1 tag</h1>
-        <h2>Child2 H2 tag</h2>
-    </div>
-</div>
-*/
+  );
+};
 
-// const heading = React.createElement("h1", {id:"heading"}, "Hi Sarvesh from React");
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading)
+const HeadingComponent3 = () => <h1>HeadingComponent with Implicit Return</h1>;
 
-// const parent = React.createElement("div", { id: "parent" },
-//                 [React.createElement("div", { id: "child1" }, [React.createElement("h1", {},"Child1 H1 tag"), React.createElement("h2", {},"Child1 H2 tag")]),
-//                     React.createElement("div", { id: "child2" }, [React.createElement("h1", {},"Child2 H1 tag"), React.createElement("h2", {},"Child2 H2 tag")])])
-
-const parent = (
-  <>
-    <h1>Parcel converts JSX to JS which browsers can understand.</h1>
-    <h1>
-      Parcel doesn't do the job of converting JSX to JS it acts as a manager and
-      the Babel is the one which Transpiles JSX to JS
-    </h1>
-    <h1>Babel converts JSX to JS which browsers can understand.</h1>
-  </>
+const HeadingComponent4 = () => (
+  <div>
+    <HeadingComponent1/>
+    <HeadingComponent2/>
+    <HeadingComponent3/>        {/* This is how an React Component is used inside another this is referred as Functional Composition */}
+    <h1>HeadingComponent with Implicit Return with paranthesis</h1>
+  </div>
 );
-
-//React.createElement()  this is an object not an html tag
-//React.createElement(tag, {attributes to the tag like id, name ......}, child element) accepts 3 arguments
-//sibling tags are declared in array
-
-console.log(parent); //this will print the object as React.createElement()  this is an object not an html tag
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+// root.render(heading);       //this is how we render React Element
+
+root.render(<HeadingComponent4/>)       // this how we render react component
